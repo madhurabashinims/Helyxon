@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MoodVibe Journal Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Core UI Colors */
+    --background: 240 10% 8%;
+    --foreground: 0 0% 95%;
+    --card: 240 8% 12%;
+    --card-foreground: 0 0% 95%;
+    --border: 240 8% 18%;
+    --input: 240 8% 16%;
+    --ring: 280 100% 70%;
+    
+    /* Mood Gradient Colors */
+    --happy-start: 33 100% 70%;
+    --happy-end: 51 100% 75%;
+    --calm-start: 220 80% 60%;
+    --calm-end: 180 60% 65%;
+    --energetic-start: 340 100% 65%;
+    --energetic-end: 25 100% 70%;
+    --sad-start: 220 20% 50%;
+    --sad-end: 200 30% 60%;
+    --excited-start: 320 100% 70%;
+    --excited-end: 60 100% 75%;
+    --peaceful-start: 140 60% 60%;
+    --peaceful-end: 200 70% 65%;
+    
+    /* UI Semantic Colors */
+    --primary: 280 100% 70%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 8% 20%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 240 8% 16%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 100%;
+    
+    /* Animations */
+    --gradient-speed: 8s;
+    --pulse-speed: 2s;
+    --float-speed: 6s;
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Mood Gradients */
+  .mood-bg-happy {
+    background: linear-gradient(135deg, hsl(var(--happy-start)), hsl(var(--happy-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+  
+  .mood-bg-calm {
+    background: linear-gradient(135deg, hsl(var(--calm-start)), hsl(var(--calm-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+  
+  .mood-bg-energetic {
+    background: linear-gradient(135deg, hsl(var(--energetic-start)), hsl(var(--energetic-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+  
+  .mood-bg-sad {
+    background: linear-gradient(135deg, hsl(var(--sad-start)), hsl(var(--sad-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+  
+  .mood-bg-excited {
+    background: linear-gradient(135deg, hsl(var(--excited-start)), hsl(var(--excited-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+  
+  .mood-bg-peaceful {
+    background: linear-gradient(135deg, hsl(var(--peaceful-start)), hsl(var(--peaceful-end)));
+    animation: gradient-shift var(--gradient-speed) ease-in-out infinite;
+  }
+
+  /* Glass morphism effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Floating animations */
+  .float {
+    animation: float var(--float-speed) ease-in-out infinite;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow var(--pulse-speed) ease-in-out infinite;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
