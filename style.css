@@ -1,0 +1,66 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #f4f4f9;
+}
+
+/* Header */
+header {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Sections */
+section {
+  padding: 2rem 10%;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #4a90e2;
+}
+
+/* Skills Section using Flexbox */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill {
+  background: #e0ecff;
+  color: #333;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  flex: 1 1 120px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Contact */
+#contact ul {
+  list-style: none;
+}
+
+#contact li {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  margin-top: 2rem;
+}
