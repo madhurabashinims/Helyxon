@@ -1,45 +1,57 @@
-// Get references to the DOM elements
-const taskInput = document.getElementById("task");
-const addTaskBtn = document.getElementById("add-task-btn");
-const taskList = document.getElementById("list");
+document.addEventListener('DOMContentLoaded', () => {
+  const taskInput = document.getElementById('task');
+  const addTaskBtn = document.getElementById('add-task-btn');
+  const taskList = document.getElementById('list');
 
-// Add a click event listener to the button
-addTaskBtn.addEventListener('click', () => {
-    // Get the value of the input box
-    const taskText = taskInput.value.trim();
+  function createTaskItem(text) {
+    const li = document.createElement('li');
 
-    // Check if the input is not empty
-    if (taskText !== '') {
-        // Create a new list item element
-        const listItem = document.createElement('li');
+    const span = document.createElement('span');
+    span.className = 'task-text';
+    span.textContent = text;
 
-        // Create a span to hold the task text
-        const taskSpan = document.createElement('span');
-        taskSpan.textContent = taskText;
+    // toggle completed when clicking the task text
+    span.addEventListener('click', () => {
+      li.classList.toggle('completed');
+    });
 
-        // Toggle completed class when clicking task text
-        taskSpan.addEventListener('click', () => {
-            listItem.classList.toggle('completed');
-        });
+    const actions = document.createElement('div');
+    actions.className = 'task-actions';
 
-        // Create a delete button
-        const deleteBtn = document.createElement('button');
-        deleteBtn.textContent = 'Delete';
-        deleteBtn.classList.add('delete-btn', 'task-btn');
+    const deleteBtn = document.createElement('button');
+    deleteBtn.className = 'delete-btn task-btn';
+    deleteBtn.textContent = 'Delete';
 
-        // Remove task on delete button click
-        deleteBtn.addEventListener('click', () => {
-            listItem.remove();
-        });
+    // stopPropagation so clicking delete won't toggle completed
+    deleteBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      li.remove();
+    });
 
-        // Append span + button inside li
-        listItem.appendChild(taskSpan);
-        listItem.appendChild(deleteBtn);
+    actions.appendChild(deleteBtn);
+    li.appendChild(span);
+    li.appendChild(actions);
 
-        // Add the new list item to the task list
-        taskList.appendChild(listItem);
+    return li;
+  }
 
-        // Clear the input box
-        taskInput.value = '';
+  function addTaskFromInput() {
+    const text = taskInput.value.trim();
+    if (!text) {
+      taskInput.focus();
+      return;
     }
+    const item = createTaskItem(text);
+    taskList.appendChild(item);
+    taskInput.value = '';
+    taskInput.focus();
+  }
+
+  // button click
+  addTaskBtn.addEventListener('click', addTaskFromInput);
+
+  // enter key
+  taskInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') addTaskFromInput();
+  });
 });

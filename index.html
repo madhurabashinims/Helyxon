@@ -1,30 +1,26 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
-    <title>My To-Do List</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<header>
+  <header>
     <h1>Welcome to To-Do list app</h1>
     <p>Explore your tasks here</p>
   </header>
 
-    <input type="text" id="task" name="task" placeholder="Enter your tasks">
+  <div class="input-row">
+    <input type="text" id="task" name="task" placeholder="Enter your task" />
     <button type="button" id="add-task-btn">Add task!</button>
+  </div>
 
-
-<main>
-
-    <div>
-        <ul id="list">
-            
-        </ul>
+  <main>
+    <div class="list-wrap">
+      <ul id="list"></ul>
     </div>
-
-    <script src="app.js"></script>
 
     <!-- Contact Section -->
     <section id="contact">
@@ -36,4 +32,8 @@
       </ul>
     </section>
   </main>
-  </body>
+
+  <!-- Script at end, plus JS uses DOMContentLoaded so it's safe either way -->
+  <script src="script.js"></script>
+</body>
+</html>
