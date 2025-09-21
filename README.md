@@ -34,11 +34,11 @@ The To-Do List will open in your default browser.
 
 
 
-👩‍💻 Contribution
+Contribution
 
 Feel free to fork this repo and suggest improvements by creating a pull request.
 
-📧 Contact
+Contact
 
 For any queries or suggestions, reach out at:
 
