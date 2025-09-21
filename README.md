@@ -34,6 +34,6 @@ The **To-Do List Web App** allows users to:
 ```bash
 git clone https://github.com/madhurabashinims/Helyxon.git
 
-![The To-Do list home page]("screenshots\Screenshot 2025-09-21 185140.png" )
+![The To-Do List Home Page](screenshots/Screenshot_2025-09-21_185140.png)
 
 
