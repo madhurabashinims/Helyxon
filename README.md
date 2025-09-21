@@ -33,7 +33,7 @@ The **To-Do List Web App** allows users to:
 
 ## **Setup Instructions**
 
-### **Clone the repository**
+### **Clone the repository*
 ```bash
 git clone https://github.com/madhurabashinims/Helyxon.git
 
