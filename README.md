@@ -1,6 +1,7 @@
 # **To-Do List Web App**
 
 A simple and interactive **To-Do List application** built with **HTML, CSS, and JavaScript**.  
+<<<<<<< HEAD
 This project helps users **add, mark, and delete tasks** with a clean and **responsive interface**.
 
 ---
@@ -34,4 +35,21 @@ The **To-Do List Web App** allows users to:
 git clone https://github.com/madhurabashinims/Helyxon.git
 
 ![The To-Do list home page]("C:\Users\Admin\Pictures\Screenshots\Screenshot 2025-09-21 184437.png" )
+=======
+This project helps users **add, mark, and delete tasks** with a clean and responsive interface.
+
+---
+
+## **Features**
+
+- **Add new tasks easily**
+- **Mark tasks as completed** (strike-through)
+- **Delete tasks individually**
+- **Responsive design** (works on mobile & desktop)
+- **Contact section** included at the bottom
+
+---
+
+
+>>>>>>> d4960965b89c64108a3a458b3946ab2a346ec4e1
 
