@@ -28,7 +28,7 @@ The **To-Do List Web App** allows users to:
 
 ---
 
-![The To-Do List Home Page]("screenshots/Screenshot_2025-09-21_185140.png")
+![The To-Do List Home Page](screenshots/Screenshot_2025-09-21_185140.png)
 
 
 ## **Setup Instructions**
