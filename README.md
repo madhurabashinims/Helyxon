@@ -36,17 +36,9 @@ git clone https://github.com/madhurabashinims/Helyxon.git
 
 ![The To-Do list home page]("C:\Users\Admin\Pictures\Screenshots\Screenshot 2025-09-21 184437.png" )
 =======
-This project helps users **add, mark, and delete tasks** with a clean and responsive interface.
 
 ---
 
-## **Features**
-
-- **Add new tasks easily**
-- **Mark tasks as completed** (strike-through)
-- **Delete tasks individually**
-- **Responsive design** (works on mobile & desktop)
-- **Contact section** included at the bottom
 
 ---
 
