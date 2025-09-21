@@ -28,12 +28,14 @@ The **To-Do List Web App** allows users to:
 
 ---
 
+![The To-Do List Home Page]("screenshots/Screenshot_2025-09-21_185140.png")
+
+
 ## **Setup Instructions**
 
 ### **Clone the repository**
 ```bash
 git clone https://github.com/madhurabashinims/Helyxon.git
 
-![The To-Do List Home Page](screenshots/Screenshot_2025-09-21_185140.png)
 
 
